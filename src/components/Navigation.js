@@ -1,34 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Container} from 'reactstrap';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+
+import './components.css';
 
 const SContainer = styled(Container)`
   text-align: center;
 `;
 
-const AlignLeft = styled.div`
-  text-align: left;
-  padding: 20px;
-`;
 
 const Navigation = () => {
   return (
     <div>
       <SContainer>
         <h1>React Router Mini</h1>
-        <AlignLeft>
+
           <div>
-            <Link to='/'>Home</Link>
+            <NavLink exact activeClassName="bluefocus" to='/'>Home</NavLink>
           </div>
           <div>
-            <Link to='/about'>About</Link>
+            <NavLink activeClassName="greenfocus" to='/about'>About</NavLink>
           </div>
           <div>
-            <Link to='/contact'>Contact</Link>
+            <NavLink activeClassName="redfocus" to='/contact'>Contact</NavLink>
+          </div>
+          <div>
+            <NavLink activeClassName="redfocus" to='/topics'>Topics</NavLink>
           </div>
 
-        </AlignLeft>
 
       </SContainer>
     </div>
@@ -36,3 +36,5 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
+// fix navlink focus
