@@ -11,12 +11,6 @@ const Topic = ({ topics, match }) => {
       <h2>{topic.description}</h2>
       {
         topic.resources.map((sub) => (
-          // <div key={i}>
-          //   <h3>{d.name}</h3>
-          //   <p>{d.id}</p>
-          //   <p>{d.description}</p>
-          //   <a href={d.url}>More Resources</a>
-          // </div>
 
           <li key={sub.id}>
             <Link to={`/topics/${match.params.topicid}/${sub.id}`}>{sub.name}</Link>
